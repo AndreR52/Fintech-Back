@@ -2,6 +2,7 @@ package com.fintech.teste;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.List;
 
 import com.fintech.dao.ProjetoDAO;
 import com.fintech.dao.ProjetoDAOImpl;
@@ -30,9 +31,15 @@ public class TesteCrud {
 			
 			System.out.println("Projeto atualizado");*/
 			
-			dao.remover(7);
+			List<Projeto> projetos = dao.buscarTodos();
 			
-			System.out.println("Projeto removido");
+			for(Projeto proj: projetos) {
+				System.out.println(proj.toString());
+			}			
+			
+			/*dao.remover(7);
+			
+			System.out.println("Projeto removido");*/
 	}
 
 }
