@@ -1,4 +1,4 @@
-package com.fintech.dao;
+package com.fintech.projeto.dao;
 
 import java.util.List;
 

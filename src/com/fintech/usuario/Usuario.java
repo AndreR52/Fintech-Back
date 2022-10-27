@@ -1,16 +1,24 @@
 package com.fintech.usuario;
 
-public class Usuario {
+abstract class Usuario {
 	
 	private String nome;
 	private String email;
 	private int telefone;
-	private int senha;
-	private double saldo;
+	private String senha;
 	
-	public void consultarSaldo() {
-		System.out.println("O saldo atual do/a usuário/a " + this.nome + " é R$ " + this.saldo);
+	public Usuario (String nome, String email, int telefone, String senha) {
+		this.nome = nome;
+		this.email = email;
+		this.telefone = telefone;
+		this.senha = senha;
 	}
+	
+	public Usuario() {}
+	
+	/*public void consultarSaldo() {
+		System.out.println("O saldo atual do/a usuário/a " + this.nome + " é R$ " + this.saldo);
+	}*/
 	
 	public String getNome() {
 		return nome;
@@ -36,19 +44,11 @@ public class Usuario {
 		this.telefone = telefone;
 	}
 
-	public int getSenha() {
+	public String getSenha() {
 		return senha;
 	}
 
-	public void setSenha(int senha) {
+	public void setSenha(String senha) {
 		this.senha = senha;
-	}
-
-	public double getSaldo() {
-		return saldo;
-	}	
-	
-	public void setSaldo(double saldo) {
-		this.saldo = saldo;
 	}
 }
